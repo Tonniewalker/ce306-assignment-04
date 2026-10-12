@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DPU FitZone | โปรแกรมออกกำลังกาย</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-lightning-charge-fill text-fz"></i> <span class="brand-dpu">DPU</span> <span class="brand-fitzone">FITZONE</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="programs.html">โปรแกรมออกกำลังกาย</a></li>
+          <li class="nav-item"><a class="nav-link" href="trainers.html">เทรนเนอร์</a></li>
+          <li class="nav-item"><a class="nav-link" href="membership.html">สมัครสมาชิก</a></li>
+        </ul>
+        <a href="membership.html" class="btn btn-fz ms-lg-3">เริ่มฟิตเลย</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <section class="page-header text-center">
+    <div class="container">
+      <h1 class="display-5 fw-bold">โปรแกรมออกกำลังกาย</h1>
+      <p class="lead mb-3">เลือกโปรแกรมที่เหมาะกับเป้าหมายและไลฟ์สไตล์ของคุณ</p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-fz">หน้าแรก</a></li>
+          <li class="breadcrumb-item active text-white-50" aria-current="page">โปรแกรม</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Programs by category (tabs) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">เลือกตามเป้าหมาย</h2>
+
+      <ul class="nav nav-pills justify-content-center mb-5 gap-2" id="programTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="lose-tab" data-bs-toggle="pill" data-bs-target="#lose" type="button" role="tab" aria-controls="lose" aria-selected="true"><i class="bi bi-fire"></i> ลดน้ำหนัก</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="muscle-tab" data-bs-toggle="pill" data-bs-target="#muscle" type="button" role="tab" aria-controls="muscle" aria-selected="false"><i class="bi bi-trophy"></i> เพิ่มกล้ามเนื้อ</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="wellness-tab" data-bs-toggle="pill" data-bs-target="#wellness" type="button" role="tab" aria-controls="wellness" aria-selected="false"><i class="bi bi-flower1"></i> สุขภาพและความยืดหยุ่น</button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="programTabContent">
+        <!-- Lose weight -->
+        <div class="tab-pane fade show active" id="lose" role="tabpanel" aria-labelledby="lose-tab">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 card-hover overflow-hidden">
+                <div class="program-banner bg-danger"><i class="bi bi-fire"></i></div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between mb-2">
+                    <h5 class="fw-bold mb-0">HIIT Burn</h5>
+                    <span class="badge text-bg-danger align-self-center">เข้มข้น</span>
+                  </div>
+                  <p class="text-muted">ฝึกแบบเข้มข้นสลับช่วงพัก กระตุ้นการเผาผลาญต่อเนื่องหลังออกกำลังกาย</p>
+                  <ul class="list-unstyled small mb-0">
+                    <li><i class="bi bi-clock text-fz"></i> 45 นาที / ครั้ง</li>
+                    <li><i class="bi bi-lightning text-fz"></i> เผาผลาญ ~600 kcal</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 card-hover overflow-hidden">
+                <div class="program-banner bg-warning"><i class="bi bi-bicycle"></i></div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between mb-2">
+                    <h5 class="fw-bold mb-0">Spinning</h5>
+                    <span class="badge text-bg-warning align-self-center">ปานกลาง</span>
+                  </div>
+                  <p class="text-muted">ปั่นจักรยานในร่มประกอบเพลงมันส์ ๆ เสริมความทนทานของหัวใจและปอด</p>
+                  <ul class="list-unstyled small mb-0">
+                    <li><i class="bi bi-clock text-fz"></i> 50 นาที / ครั้ง</li>
+                    <li><i class="bi bi-lightning text-fz"></i> เผาผลาญ ~500 kcal</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 card-hover overflow-hidden">
+                <div class="program-banner bg-dark"><i class="bi bi-person-arms-up"></i></div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between mb-2">
+                    <h5 class="fw-bold mb-0">มวยไทยฟิตเนส</h5>
+                    <span class="badge text-bg-danger align-self-center">เข้มข้น</span>
+                  </div>
+                  <p class="text-muted">ผสมผสานท่ามวยไทยกับคาร์ดิโอ ได้ทั้งความฟิตและทักษะป้องกันตัว</p>
+                  <ul class="list-unstyled small mb-0">
+                    <li><i class="bi bi-clock text-fz"></i> 60 นาที / ครั้ง</li>
+                    <li><i class="bi bi-lightning text-fz"></i> เผาผลาญ ~700 kcal</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Build muscle -->
+        <div class="tab-pane fade" id="muscle" role="tabpanel" aria-labelledby="muscle-tab">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 card-hover overflow-hidden">
+                <div class="program-banner bg-dark"><i class="bi bi-trophy"></i></div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between mb-2">
+                    <h5 class="fw-bold mb-0">Strength Training</h5>
+                    <span class="badge text-bg-warning align-self-center">ปานกลาง</span>
+                  </div>
+                  <p class="text-muted">ฝึกเวทพื้นฐาน Squat, Deadlift, Bench Press อย่างถูกเทคนิค</p>
+                  <ul class="list-unstyled small mb-0">
+                    <li><i class="bi bi-clock text-fz"></i> 60 นาที / ครั้ง</li>
+                    <li><i class="bi bi-calendar-check text-fz"></i> แนะนำ 3-4 ครั้ง / สัปดาห์</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 card-hover overflow-hidden">
+                <div class="program-banner bg-primary"><i class="bi bi-diagram-3"></i></div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between mb-2">
+                    <h5 class="fw-bold mb-0">Functional Training</h5>
+                    <span class="badge text-bg-warning align-self-center">ปานกลาง</span>
+                  </div>
+                  <p class="text-muted">ฝึกกล้ามเนื้อหลายมัดพร้อมกัน ด้วย Kettlebell, TRX และ Battle Rope</p>
+                  <ul class="list-unstyled small mb-0">
+                    <li><i class="bi bi-clock text-fz"></i> 45 นาที / ครั้ง</li>
+                    <li><i class="bi bi-calendar-check text-fz"></i> แนะนำ 2-3 ครั้ง / สัปดาห์</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 card-hover overflow-hidden">
+                <div class="program-banner bg-danger"><i class="bi bi-graph-up-arrow"></i></div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between mb-2">
+                    <h5 class="fw-bold mb-0">Bodybuilding</h5>
+                    <span class="badge text-bg-danger align-self-center">ขั้นสูง</span>
+                  </div>
+                  <p class="text-muted">โปรแกรมแยกส่วนกล้ามเนื้อ (Split) สำหรับผู้ที่ต้องการสร้างรูปร่างจริงจัง</p>
+                  <ul class="list-unstyled small mb-0">
+                    <li><i class="bi bi-clock text-fz"></i> 75 นาที / ครั้ง</li>
+                    <li><i class="bi bi-calendar-check text-fz"></i> แนะนำ 5 ครั้ง / สัปดาห์</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wellness -->
+        <div class="tab-pane fade" id="wellness" role="tabpanel" aria-labelledby="wellness-tab">
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 card-hover overflow-hidden">
+                <div class="program-banner bg-success"><i class="bi bi-flower1"></i></div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between mb-2">
+                    <h5 class="fw-bold mb-0">Yoga Flow</h5>
+                    <span class="badge text-bg-success align-self-center">เริ่มต้น</span>
+                  </div>
+                  <p class="text-muted">เคลื่อนไหวต่อเนื่องประสานลมหายใจ เพิ่มความยืดหยุ่นและผ่อนคลาย</p>
+                  <ul class="list-unstyled small mb-0">
+                    <li><i class="bi bi-clock text-fz"></i> 60 นาที / ครั้ง</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 card-hover overflow-hidden">
+                <div class="program-banner bg-info"><i class="bi bi-circle-square"></i></div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between mb-2">
+                    <h5 class="fw-bold mb-0">Pilates</h5>
+                    <span class="badge text-bg-success align-self-center">เริ่มต้น</span>
+                  </div>
+                  <p class="text-muted">เสริมความแข็งแรงของแกนกลางลำตัว ปรับบุคลิกภาพและท่าทาง</p>
+                  <ul class="list-unstyled small mb-0">
+                    <li><i class="bi bi-clock text-fz"></i> 50 นาที / ครั้ง</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 card-hover overflow-hidden">
+                <div class="program-banner bg-secondary"><i class="bi bi-person-walking"></i></div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between mb-2">
+                    <h5 class="fw-bold mb-0">Senior Fit</h5>
+                    <span class="badge text-bg-success align-self-center">เริ่มต้น</span>
+                  </div>
+                  <p class="text-muted">ออกกำลังกายแรงกระแทกต่ำสำหรับผู้สูงอายุ เน้นการทรงตัวและข้อต่อ</p>
+                  <ul class="list-unstyled small mb-0">
+                    <li><i class="bi bi-clock text-fz"></i> 45 นาที / ครั้ง</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weekly class schedule -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-title text-center">ตารางคลาสประจำสัปดาห์</h2>
+      <div class="table-responsive shadow-sm rounded">
+        <table class="table table-hover table-bordered align-middle text-center mb-0 bg-white">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">เวลา</th>
+              <th scope="col">จันทร์</th>
+              <th scope="col">อังคาร</th>
+              <th scope="col">พุธ</th>
+              <th scope="col">พฤหัสบดี</th>
+              <th scope="col">ศุกร์</th>
+              <th scope="col">เสาร์</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">07:00</th>
+              <td>Yoga Flow</td>
+              <td>Spinning</td>
+              <td>Yoga Flow</td>
+              <td>Spinning</td>
+              <td>Pilates</td>
+              <td>Senior Fit</td>
+            </tr>
+            <tr>
+              <th scope="row">12:00</th>
+              <td>HIIT Burn</td>
+              <td>Functional</td>
+              <td>HIIT Burn</td>
+              <td>Functional</td>
+              <td>HIIT Burn</td>
+              <td>มวยไทย</td>
+            </tr>
+            <tr>
+              <th scope="row">18:00</th>
+              <td>Strength</td>
+              <td>มวยไทย</td>
+              <td>Strength</td>
+              <td>มวยไทย</td>
+              <td>Spinning</td>
+              <td>Yoga Flow</td>
+            </tr>
+            <tr>
+              <th scope="row">19:30</th>
+              <td>Pilates</td>
+              <td>Bodybuilding</td>
+              <td>Spinning</td>
+              <td>Bodybuilding</td>
+              <td>Yoga Flow</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ accordion -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">คำถามที่พบบ่อย</h2>
+      <div class="accordion col-lg-8 mx-auto" id="faq">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+              มือใหม่ควรเริ่มจากโปรแกรมไหน?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+            <div class="accordion-body">แนะนำเริ่มจาก Yoga Flow หรือ Pilates เพื่อปูพื้นฐานความยืดหยุ่นและแกนกลางลำตัว จากนั้นค่อยเพิ่ม Strength Training สัปดาห์ละ 2 ครั้ง</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+              ต้องจองคลาสล่วงหน้าหรือไม่?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body">ควรจองล่วงหน้าผ่านเคาน์เตอร์หรือแอปอย่างน้อย 2 ชั่วโมง เนื่องจากแต่ละคลาสรับจำนวนจำกัด</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+              ต้องเตรียมอะไรมาบ้าง?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq">
+            <div class="accordion-body">ชุดออกกำลังกาย รองเท้าผ้าใบ และขวดน้ำ ส่วนผ้าเช็ดตัวและล็อกเกอร์ทางฟิตเนสมีให้บริการฟรี</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <p class="mb-3">อยากได้โปรแกรมเฉพาะตัว? ปรึกษาเทรนเนอร์ของเรา</p>
+        <a href="trainers.html" class="btn btn-fz px-4">ดูทีมเทรนเนอร์ <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white fw-bold"><i class="bi bi-lightning-charge-fill text-fz"></i> <span class="brand-dpu">DPU</span> <span class="brand-fitzone">FITZONE</span></h5>
+          <p class="small">ฟิตเนสครบวงจรสำหรับทุกเป้าหมาย ไม่ว่าจะลดน้ำหนัก เพิ่มกล้ามเนื้อ หรือดูแลสุขภาพ</p>
+        </div>
+        <div class="col-6 col-md-4">
+          <h6 class="text-white fw-bold">เมนู</h6>
+          <ul class="list-unstyled small">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="programs.html">โปรแกรมออกกำลังกาย</a></li>
+            <li><a href="trainers.html">เทรนเนอร์</a></li>
+            <li><a href="membership.html">สมัครสมาชิก</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h6 class="text-white fw-bold">ติดต่อเรา</h6>
+          <ul class="list-unstyled small">
+            <li><i class="bi bi-geo-alt"></i> 123 ถ.พหลโยธิน กรุงเทพฯ</li>
+            <li><i class="bi bi-telephone"></i> 02-123-4567</li>
+            <li><i class="bi bi-envelope"></i> hello@fitzone.example</li>
+          </ul>
+          <div class="fs-5 d-flex gap-3">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <p class="text-center small mb-0">&copy; 2026 DPU FitZone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
